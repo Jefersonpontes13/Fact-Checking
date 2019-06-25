@@ -5,6 +5,23 @@
 	margin-left: 0px;
 }
 
-.img-body{
+body{
+	background-image: url(img/background.jpg);
+	background-repeat: repeat;
+    background-attachment: scroll;
+
+}
+
+.inicio{
+	background-color: white; 
+	margin-top: 110px; 
 	
+	border-radius: 10px 20px;
+
+}
+.form-control{
+	width: 600px;
+}
+.busca{
+	width: 800px;
 }
