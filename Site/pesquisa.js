@@ -5,5 +5,5 @@ var btnElement = document.getElementById("botao");
 
 btnElement.onclick = function() {
     alert(pesq)
-    window.location = "https://g1.globo.com/busca/?q=";
+    window.location = "https://g1.globo.com/busca/?q=" + pesq;
 }
