@@ -1,4 +1,6 @@
+var inputElement = document.querySelector("#pesquisa");
 var btnElement = document.querySelector("#botao");
+
 var sitesConfiaveis = [
 	"www.estadao.com.br",
 	"diariodonordeste.verdesmares.com.br",
@@ -7,9 +9,14 @@ var sitesConfiaveis = [
 ];
 
 btnElement.onclick = function() {
-    var inputElement = document.querySelector("#pesquisa");
-    var pesq = inputElement.value;
+	var site = inputElement.value.split("/")[2];
 
-    alert(pesq);
-    window.open("https://g1.globo.com/busca/?q=" + pesq);
+	for(siteConf of sitesConfiaveis){
+		if(siteConf === site){
+			alert("Site é confiável.\nA notícia deve ser também.");
+			return;
+		}
+	}
+
+	alert("Site não é confiável.\nA notícia é duvidosa.");
 }
