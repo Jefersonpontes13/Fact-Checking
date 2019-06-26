@@ -1,9 +1,6 @@
-var inputElement = document.getElementById("pesquisa");
-var pesq = inputElement.innerText;
+var entrada = document.getElementById("texto-busca");
+var botao = document.getElementById("botao-busca");
 
-var btnElement = document.getElementById("botao");
-
-btnElement.onclick = function() {
-    alert(pesq)
-    window.location = "https://g1.globo.com/busca/?q=";
+function buscar(){
+	window.open("https://g1.globo.com/busca/?q="+entrada.value);
 }
